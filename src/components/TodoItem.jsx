@@ -11,9 +11,9 @@ const TodoItem = ({ todo }) => {
         isChecked={TodoItem.compeleted}
         onChange={() => dispatch(toggleTodo(todo.id))}
       />
-      <Text textDecoration={TodoItem.completed ? "line-through" : "none"}>
+      <p textDecoration={TodoItem.completed ? "line-through" : "none"}>
         {todo.text}
-      </Text>
+      </p>
       <Button colorScheme="red" onClick={() => dispatch(deleteTodo(todo.id))}>
         Delete
       </Button>
